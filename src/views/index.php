@@ -17,12 +17,22 @@
             <img src="../../assets/logo.png" alt="logo">
         </header>
         <div class="vertical-line"></div>
-        <aside class="playlists">
-            <div class="add">
-                <img src="../../assets/add-circle.svg" alt="Sinal de mais">
-                <span>Adicionar playlist</span>
-            </div>
-        </aside>
+        <div class="content">
+            <aside>
+                <div class="add">
+                    <img src="../../assets/add-circle.svg" alt="Sinal de mais">
+                    <span>Adicionar música</span>
+                </div>
+
+                <ul class="musics">
+
+                </ul>
+            </aside>
+
+            <main>
+                <input class="invisible music-name" type="text" maxlength="30" placeholder="Digite o nome da musica">
+            </main>
+        </div>
     </div>
 </body>
 </html>

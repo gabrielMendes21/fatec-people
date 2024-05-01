@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 body {
@@ -12,7 +13,8 @@ header {
     border-bottom: 1px solid black;
 }
 
-.playlists {
+aside {
+    flex: 1;
     height: 100vh;
     width: 12rem;
     border-right: 1px solid black;
@@ -38,4 +40,33 @@ img[alt="logo"] {
 
 span {
     display: inline-block;
+}
+
+.content {
+    display: flex;
+}
+
+main {
+    flex: 8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: 0;
+    font-size: 25px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+.musics {
+    margin-top: 1rem;
 }

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 18px Arial, sans-serif;
+    height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+
+.playlists {
+    height: 100vh;
+    width: 12rem;
+    border-right: 1px solid black;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add {
+    width: 80px;
+    border-radius: 7px;
+}
+
+.add:hover {
+    cursor: pointer;
+}
+
+img[alt="logo"] {
+    width: 200px;
+}
+
+span {
+    display: inline-block;
+}

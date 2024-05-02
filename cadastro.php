@@ -10,7 +10,6 @@
         require 'vendor/autoload.php';
         use App\Src\Database\Conexao;
 
-        // Obter os dados do formulário e sanitizá-los
         $name = htmlspecialchars($_POST["name"]);
         $email = htmlspecialchars($_POST["email"]);
         $dataNasc = htmlspecialchars($_POST["dataNasc"]);

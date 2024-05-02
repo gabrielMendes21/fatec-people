@@ -14,7 +14,6 @@
 <body>
     <div class="container">
         <header>
-            <!-- <img src="./assets/logo2.jpg" alt="logo"> -->
             <img src="assets/danilo-perfil.png" alt="">
             <img src="assets/gabriel-perfil.png" alt="">
             <img src="assets/henrique-perfil.png" alt="">
@@ -49,18 +48,39 @@
                 </form>
             </div>
 
-            <main>         
-                <div class="card-dados">
-                    <img src="./assets/iconUser.png" alt="iconUser" class="iconUser">
-                    <span>Gabriel Mendes</span>
-                    <span>gabriel.mendes19@fatec.sp.gov.br</span>
-                    <span>21/11/2005</span>
-                    <hr>
-                    <div class="operations">
-                        <button>EDITAR</button>
-                        <button>EXCLUIR</button>
-                    </div>
-                </div>
+            <main>
+                <?php
+                    require 'vendor/autoload.php';
+                    use App\Src\Database\Conexao;
+
+                    // Criar uma nova conexão
+                    $conexao = new Conexao();
+
+                    // Preparar a chamada do procedimento armazenado com parâmetros seguros
+                    $sql = "CALL buscar_usuarios()";
+
+                    try {
+                        // Executar a consulta
+                        $users = mysqli_query($conexao->conn, $sql);
+
+                        foreach ($users as $user) {
+                            echo '<div class="card-dados">
+                            <img src="./assets/iconUser.png" alt="iconUser" class="iconUser">
+                            <span>' . $user['nome'] . '</span>
+                            <span>' . $user['email'] . '</span>
+                            <span>' . $user['data_nascimento'] . '</span>
+                            <hr>
+                            <div class="operations">
+                                <a href="#">EDITAR</a>
+                                <a href="#">EXCLUIR</a>
+                            </div>
+                            </div>';
+                        }
+                    } catch(Exception $err) {
+                        // Lidar com exceções
+                        echo $err->getMessage();
+                    }
+                ?>
 
                 
             </main>

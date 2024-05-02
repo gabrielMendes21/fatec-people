@@ -164,7 +164,12 @@ img[alt="iconUser"] {
     justify-content: flex-end;
 }
 
-button {
+body {
+    background: red;
+}
+
+a {
+    text-decoration: none;
     padding: .5rem 1rem;
     border: none;
     color: white;
@@ -175,48 +180,8 @@ button {
     font-weight: 700;
 }
 
-button:hover {
+a:hover {
     cursor: pointer;
     background-color: rgb(44, 44, 44);
     transition: .4s;
 }
-
-/* Mídia para telas menores */
-/* @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .vertical-line {
-        display: block;
-    }
-
-    aside {
-        width: 20%; 
-        border-right: none; 
-        border-bottom: 1px solid black;
-    }
-
-    .add{
-        width: 50%;
-    }
-    span {
-        font-size: 8pt;
-    }
-
-    main {
-        flex-direction: column; 
-    }
-
-    .card-music {
-        width: calc(50% - 30px);
-    }
-
-    header {   
-        height: 15%;
-    }
-
-    img[alt="logo"] {
-        width: 100px;
-    }
-} */

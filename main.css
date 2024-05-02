@@ -16,7 +16,7 @@ header {
 }
 
 img[alt="logo"] {
-    width: 150px;
+    width: 500px;
     margin-left: 30px;
 }
 
@@ -88,11 +88,11 @@ h2 {
 input {
     border: 0;
     font-size: 1rem;
-    padding: .7rem 1rem;
     border-radius: 5px;
 }
 
 select, input {
+    padding: .7rem 1rem;
     margin: .5rem 0 .8rem;
     display: block;
 
@@ -112,9 +112,15 @@ input:focus {
 }
 
 span {
-    display: inline-block;
+    display: block;
     color: black;
-    text-align: center;
+    text-align: left;
+    margin-bottom: .7rem;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 1rem 0;
 }
 
 main {
@@ -127,7 +133,7 @@ main {
     gap: 40px;
 }
 
-.card-music {
+.card-dados {
     height: auto;
     background-color: #088f4e;
     align-self: flex-start;
@@ -136,6 +142,7 @@ main {
     text-align: center;
     box-sizing: border-box; /* Inclui o padding e a borda na largura da div */
     border-radius: 8px;
+    padding: 1rem;
 }
 
 .operations {
@@ -146,9 +153,10 @@ main {
 button {
     padding: .5rem 1rem;
     border: none;
-    background-color: #00BF63;
-    border-radius: 7px;
     color: white;
+    margin-right: 1rem;
+    background-color: rgb(34, 34, 34);
+    border-radius: 7px;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -156,22 +164,7 @@ button {
 button:hover {
     cursor: pointer;
     filter: brightness(110%);
-}
-
-.operations button{
-    border-radius: 10px;
-    padding: .8rem 1rem;
-    background-color: #086337;
-    margin: 10px;
-    color: white;
-    border: none;
-}
-
-.operations button:hover {
-    filter: brightness(110%);
-    cursor: pointer;
-
-    transition: .3s;
+    transition: .4s;
 }
 
 /* Mídia para telas menores */

@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="./assets/logo.png" alt="logo">
+            <img src="./assets/logo2.jpg" alt="logo">
         </header>
         <div class="vertical-line"></div>
         <div class="content">
@@ -33,50 +33,26 @@
                     <label for="name">Nome</label>
                     <input type="text" placeholder="Digite seu nome" id="name" name="name">
 
-                    <label for="music-name">Nome da música</label>
-                    <input type="text" placeholder="Digite o nome da música" id="music-name" name="musicName">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Digite o seu email" id="email" name="email">
 
-                    <label for="genero">Gênero da música</label>
-                    <select name="genero" id="genero">
-                        <option value="rock">Rock</option>
-                    </select>
-                    
-                    <label for="music-link">Link</label>
-                    <input type="text" placeholder="Digite o Link da música" id="music-link" name="musicLink">
+                    <label for="data-nascimento">Data de nascimento</label>
+                    <input type="date" placeholder="Digite a sua data de nascimento" id="data-nascimento" name="dataNasc">
 
                     <button type="submit">Enviar</button>
                 </form>
             </div>
 
             <main>         
-                <div class="card-music">
+                <div class="card-dados">
+                    <span>Gabriel Mendes</span>
+                    <span>gabriel.mendes19@fatec.sp.gov.br</span>
+                    <span>21/11/2005</span>
+                    <hr>
                     <div class="operations">
                         <button>EDITAR</button>
                         <button>EXCLUIR</button>
                     </div>
-                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/uDsljnSyk3g" frameborder="0" allowfullscreen></iframe>
-                    <p>NOME DA MUSICA</p>
-                    <p>MAIS INFO</p>
-                </div>
-
-                <div class="card-music">
-                    <div class="operations">
-                        <button>EDITAR</button>
-                        <button>EXCLUIR</button>
-                    </div>
-                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/uDsljnSyk3g" frameborder="0" allowfullscreen></iframe>
-                    <p>NOME DA MUSICA</p>
-                    <p>MAIS INFO</p>
-                </div>
-
-                <div class="card-music">
-                    <div class="operations">
-                        <button>EDITAR</button>
-                        <button>EXCLUIR</button>
-                    </div>
-                    <iframe width="100%" height="300px" src="https://www.youtube.com/embed/uDsljnSyk3g" frameborder="0" allowfullscreen></iframe>
-                    <p>NOME DA MUSICA</p>
-                    <p>MAIS INFO</p>
                 </div>
             </main>
         </div>

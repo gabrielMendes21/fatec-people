@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font: 18px Arial, sans-serif;
+    height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid black;
+    background-color: black;   
+    height: 18%;
+}
+
+img[alt="logo"] {
+    width: 150px;
+    margin-left: 30px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.vertical-line {
+    display: none; /* Oculta a linha vertical em telas menores */
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 12rem;
+    border-right: 1px solid black;
+    padding: 10px;
+    background-color: black; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add {
+    width: 80px;
+    border-radius: 7px;
+    background-color: #00BF63; 
+    padding: 8px;
+}
+
+.add:hover {
+    cursor: pointer;
+    background-color: #088f4e; 
+}
+
+
+
+span {
+    display: inline-block;
+    color: black;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; 
+    background-color: #161616;/* Permite que os itens se quebrem para baixo quando não houver espaço suficiente */
+}
+
+.card-music {
+    width: calc((100% - 60px) / 3); /* Calcula a largura de cada div para que haja espaço para três em uma linha com 20px de espaço entre eles */
+    height: auto;
+    background-color: #088f4e;
+    align-self: flex-start;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box; /* Inclui o padding e a borda na largura da div */
+    border-radius: 8px;
+}
+
+.operations{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.operations button{
+    border-radius: 10px;
+    padding: 6px;
+    background-color: #086337;
+    margin: 10px;
+    color: white;
+    
+}
+
+/* Mídia para telas menores */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Altera para layout de coluna em telas menores */
+    }
+
+    .vertical-line {
+        display: block; /* Mostra a linha vertical em telas menores */
+    }
+
+    aside {
+        width: 20%; /* Ocupa toda a largura em telas menores */
+        border-right: none; /* Remove a borda lateral em telas menores */
+        border-bottom: 1px solid black; /* Adiciona uma linha inferior em telas menores */
+    }
+
+    .add{
+        width: 50%;
+    }
+    span {
+        font-size: 8pt;
+    }
+
+    main {
+        flex-direction: column; /* Altera para layout de coluna em telas menores */
+    }
+
+    .card-music {
+        width: calc(50% - 30px); /* Calcula a largura de cada div para que haja espaço para duas em uma linha com 20px de espaço entre elas */
+    }
+
+    header {   
+        height: 15%;
+    }
+
+    img[alt="logo"] {
+        width: 100px;
+    }
+}

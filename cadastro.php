@@ -14,9 +14,7 @@
         $email = $_POST["email"];
         $dataNasc = $_POST["dataNasc"];
 
-        echo "Nome: $name <br>";
-        echo "Email: $email <br>";
-        echo "Data de nascimento: $dataNasc <br>";
+        
     ?>
 </body>
 </html>

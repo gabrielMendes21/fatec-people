@@ -31,13 +31,13 @@
                     <h2>Adicionar pessoa</h2>
 
                     <label for="name">Nome</label>
-                    <input type="text" placeholder="Digite seu nome" id="name" name="name">
+                    <input type="text" placeholder="Digite seu nome" id="name" name="name" required>
 
                     <label for="email">Email</label>
-                    <input type="text" placeholder="Digite o seu email" id="email" name="email">
+                    <input type="text" placeholder="Digite o seu email" id="email" name="email" required>
 
                     <label for="data-nascimento">Data de nascimento</label>
-                    <input type="date" placeholder="Digite a sua data de nascimento" id="data-nascimento" name="dataNasc">
+                    <input type="date" placeholder="Digite a sua data de nascimento" id="data-nascimento" name="dataNasc" required>
 
                     <button type="submit">Enviar</button>
                 </form>

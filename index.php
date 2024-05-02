@@ -14,7 +14,13 @@
 <body>
     <div class="container">
         <header>
-            <img src="./assets/logo2.jpg" alt="logo">
+            <!-- <img src="./assets/logo2.jpg" alt="logo"> -->
+            <img src="assets/danilo-perfil.png" alt="">
+            <img src="assets/gabriel-perfil.png" alt="">
+            <img src="assets/henrique-perfil.png" alt="">
+            <img src="assets/joao-perfil.png" alt="">
+            <img src="assets/lucas-perfil.png" alt="">
+            <img src="assets/paulo-perfil.png" alt="">
         </header>
         <div class="vertical-line"></div>
         <div class="content">

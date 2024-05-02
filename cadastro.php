@@ -8,13 +8,27 @@
 <body>
     <?php
         require 'vendor/autoload.php';
-        use App\Src\database\conexao;
+        use App\Src\Database\Conexao;
 
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $dataNasc = $_POST["dataNasc"];
+        // Obter os dados do formulário e sanitizá-los
+        $name = htmlspecialchars($_POST["name"]);
+        $email = htmlspecialchars($_POST["email"]);
+        $dataNasc = htmlspecialchars($_POST["dataNasc"]);
 
-        
+        // Criar uma nova conexão
+        $conexao = new Conexao();
+
+        // Preparar a chamada do procedimento armazenado com parâmetros seguros
+        $sql = "CALL cadastrar_usuario('$name', '$email', '$dataNasc')";
+
+        try {
+            // Executar a consulta
+            mysqli_query($conexao->conn, $sql);
+            echo "Sucesso";
+        } catch(Exception $err) {
+            // Lidar com exceções
+            echo $err->getMessage();
+        }
     ?>
 </body>
 </html>

@@ -21,7 +21,7 @@
             <aside>
                 <div class="add">                    
                     <img src="./assets/add-circle.svg" alt="Sinal de mais">
-                    <span>Adicionar música</span>
+                    <span>Adicionar pessoa</span>
                 </div>
             </aside>
 
@@ -45,6 +45,7 @@
 
             <main>         
                 <div class="card-dados">
+                    <img src="./assets/iconUser.png" alt="iconUser" class="iconUser">
                     <span>Gabriel Mendes</span>
                     <span>gabriel.mendes19@fatec.sp.gov.br</span>
                     <span>21/11/2005</span>
@@ -54,6 +55,8 @@
                         <button>EXCLUIR</button>
                     </div>
                 </div>
+
+                
             </main>
         </div>
     </div>

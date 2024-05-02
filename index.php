@@ -28,7 +28,7 @@
             <div class="modal">
                 <img src="./assets/x-icon.svg" alt="close icon" class="close">
                 <form action="">
-                    <h2>Adicionar música</h2>
+                    <h2>Adicionar pessoa</h2>
 
                     <label for="name">Nome</label>
                     <input type="text" placeholder="Digite seu nome" id="name" name="name">

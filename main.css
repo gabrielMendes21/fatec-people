@@ -163,7 +163,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    filter: brightness(110%);
+    background-color: rgb(44, 44, 44);
     transition: .4s;
 }
 

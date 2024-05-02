@@ -58,7 +58,58 @@ aside {
     background-color: #088f4e; 
 }
 
+.modal {
+    width: 50%;
+    background-color: #F1F1F1;
+    box-shadow: 0px 0px 10px 100vw rgba(0, 0, 0, .5);
+    padding: 2rem;
+    border-radius: 7px;
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.close {
+    width: 1.5rem;
+    position: absolute;
+    right: 2rem;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+input {
+    border: 0;
+    font-size: 1rem;
+    padding: .7rem 1rem;
+    border-radius: 5px;
+}
+
+select, input {
+    margin: .5rem 0 .8rem;
+    display: block;
+
+    width: 50%;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
 
 span {
     display: inline-block;
@@ -68,16 +119,15 @@ span {
 
 main {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    background-color: #161616; /* Permite que os itens se quebrem para baixo quando não houver espaço suficiente */
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 500px);
     gap: 40px;
-    flex-wrap: wrap; 
-    background-color: #161616;/* Permite que os itens se quebrem para baixo quando não houver espaço suficiente */
 }
 
 .card-music {
-    width: calc((100% - 60px) / 3); /* Calcula a largura de cada div para que haja espaço para três em uma linha com 20px de espaço entre eles */
     height: auto;
     background-color: #088f4e;
     align-self: flex-start;
@@ -88,35 +138,56 @@ main {
     border-radius: 8px;
 }
 
-.operations{
+.operations {
     display: flex;
     justify-content: flex-end;
-    
+}
+
+button {
+    padding: .5rem 1rem;
+    border: none;
+    background-color: #00BF63;
+    border-radius: 7px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(110%);
 }
 
 .operations button{
     border-radius: 10px;
-    padding: 6px;
+    padding: .8rem 1rem;
     background-color: #086337;
     margin: 10px;
     color: white;
-    
+    border: none;
+}
+
+.operations button:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+
+    transition: .3s;
 }
 
 /* Mídia para telas menores */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Altera para layout de coluna em telas menores */
+        flex-direction: column;
     }
 
     .vertical-line {
-        display: block; /* Mostra a linha vertical em telas menores */
+        display: block;
     }
 
     aside {
-        width: 20%; /* Ocupa toda a largura em telas menores */
-        border-right: none; /* Remove a borda lateral em telas menores */
-        border-bottom: 1px solid black; /* Adiciona uma linha inferior em telas menores */
+        width: 20%; 
+        border-right: none; 
+        border-bottom: 1px solid black;
     }
 
     .add{
@@ -127,11 +198,11 @@ main {
     }
 
     main {
-        flex-direction: column; /* Altera para layout de coluna em telas menores */
+        flex-direction: column; 
     }
 
     .card-music {
-        width: calc(50% - 30px); /* Calcula a largura de cada div para que haja espaço para duas em uma linha com 20px de espaço entre elas */
+        width: calc(50% - 30px);
     }
 
     header {   
@@ -141,4 +212,4 @@ main {
     img[alt="logo"] {
         width: 100px;
     }
-}
+} */

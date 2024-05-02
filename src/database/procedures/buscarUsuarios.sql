@@ -1,0 +1,6 @@
+DELIMITER //
+CREATE PROCEDURE buscar_usuarios()
+BEGIN
+	SELECT * FROM usuarios;
+END //
+DELIMITER ; 

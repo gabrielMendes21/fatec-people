@@ -72,7 +72,10 @@
                             <hr>
                             <div class="operations">
                                 <a href="#">EDITAR</a>
-                                <a href="#">EXCLUIR</a>
+                                <form action="excluir.php" method="POST">
+                                    <input style="display: none; type="text" value="'. $user["id"] . '" name="id">
+                                    <button>EXCLUIR</button>
+                                </form>
                             </div>
                             </div>';
                         }
@@ -81,8 +84,6 @@
                         echo $err->getMessage();
                     }
                 ?>
-
-                
             </main>
         </div>
     </div>

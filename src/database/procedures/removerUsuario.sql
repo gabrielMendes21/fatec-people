@@ -1,0 +1,6 @@
+DELIMITER //
+CREATE PROCEDURE remover_usuario(IN id_u INT)
+BEGIN
+	DELETE FROM usuarios WHERE ID = id_u;
+END //
+DELIMITER ;

@@ -27,7 +27,7 @@
 
             <div class="modal">
                 <img src="./assets/x-icon.svg" alt="close icon" class="close">
-                <form action="">
+                <form action="cadastro.php" method="POST">
                     <h2>Adicionar pessoa</h2>
 
                     <label for="name">Nome</label>

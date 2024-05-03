@@ -81,21 +81,25 @@
                         // Executar a consulta
                         $users = mysqli_query($conexao->conn, $sql);
 
-                        foreach ($users as $user) {
-                            echo '<div class="card-dados">
-                            <img src="./assets/iconUser.png" alt="iconUser" class="iconUser">
-                            <span>' . $user['nome'] . '</span>
-                            <span>' . $user['email'] . '</span>
-                            <span>' . $user['data_nascimento'] . '</span>
-                            <hr>
-                            <div class="operations">
+                        if (mysqli_num_rows($users) > 0) { 
+                            foreach ($users as $user) {
+                                echo '<div class="card-dados">
+                                <img src="./assets/iconUser.png" alt="iconUser" class="iconUser">
+                                <span>' . $user['nome'] . '</span>
+                                <span>' . $user['email'] . '</span>
+                                <span>' . $user['data_nasc'] . '</span>
+                                <hr>
+                                <div class="operations">
                                 <button type="button" class="edit">EDITAR</button>
                                 <form action="excluir.php" method="POST">
-                                    <input style="display: none; type="text" value="'. $user["id"] . '" name="id">
-                                    <button>EXCLUIR</button>
+                                <input style="display: none; type="text" value="'. $user["id"] . '" name="id">
+                                <button>EXCLUIR</button>
                                 </form>
-                            </div>
-                            </div>';
+                                </div>
+                                </div>';
+                            }
+                        } else {
+                            echo "<span class='empty-message'>Não existem usuários cadastrados 😕</span>";
                         }
                     } catch(Exception $err) {
                         // Lidar com exceções

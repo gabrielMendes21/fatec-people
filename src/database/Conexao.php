@@ -5,7 +5,8 @@
         public $server;
         public $user;
         public $pass;
-        public $db;
+        public $bd;
+        public $conn;
 
         public function __construct() {
             $this->server = "localhost";

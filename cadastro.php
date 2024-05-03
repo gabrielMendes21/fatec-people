@@ -23,7 +23,7 @@
         try {
             // Executar a consulta
             mysqli_query($conexao->conn, $sql);
-            echo "Sucesso";
+            header("Location: index.php");
         } catch(Exception $err) {
             // Lidar com exceções
             echo $err->getMessage();

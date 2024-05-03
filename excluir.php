@@ -5,7 +5,7 @@
     // Criar uma nova conexão
     $conexao = new Conexao();
 
-    $id = $_POST["id"];
+    $id = $_GET["id"];
 
     // Preparar a chamada do procedimento armazenado com parâmetros seguros
     $sql = "CALL remover_usuario('$id')";

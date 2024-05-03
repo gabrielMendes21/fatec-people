@@ -47,8 +47,9 @@
 
             <main>
                 <?php
-                    require 'vendor/autoload.php';
-                    use App\Src\Database\Conexao;
+                    // require 'vendor/autoload.php';
+                    // use App\Src\Database\Conexao;
+                    require_once('src/database/Conexao.php');
 
                     // Criar uma nova conexão
                     $conexao = new Conexao();

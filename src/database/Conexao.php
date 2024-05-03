@@ -1,5 +1,5 @@
 <?php
-    namespace App\Src\Database;
+    // namespace App\Src\Database;
 
     class Conexao {
         public $server;

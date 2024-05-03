@@ -7,8 +7,9 @@
 </head>
 <body>
     <?php
-        require 'vendor/autoload.php';
-        use App\Src\Database\Conexao;
+        // require 'vendor/autoload.php';
+        // use App\Src\Database\Conexao;
+        require_once('src/database/Conexao.php');
 
         $name = htmlspecialchars($_POST["name"]);
         $email = htmlspecialchars($_POST["email"]);

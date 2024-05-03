@@ -1,14 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const addUserButton = document.querySelector('.add');
-    const closeModalButton = document.querySelector('.close');
-    const modal = document.querySelector('.modal-cadastro');
-    modal.classList.add("invisible");
+    const editUserButton = document.querySelector('.edit');
+    const closeAddModal = document.querySelector('.close-add');
+    const addUserModal = document.querySelector('.modal-cadastro');
+    const editUserModal = document.querySelector('.modal-edicao');
+    addUserModal.classList.add("invisible");
 
     addUserButton.addEventListener("click", (event) => {
-        modal.classList.remove("invisible");
+        addUserModal.classList.remove("invisible");
+    })
+
+    closeAddModal.addEventListener("click", () => {
+        addUserModal.classList.add("invisible");
+    })
+
+    editUserButton.addEventListener("click", (event) => {
+        addUserModal.classList.remove("invisible");
     })
 
     closeModalButton.addEventListener("click", () => {
-        modal.classList.add("invisible");
+        editUserModal.classList.add("invisible");
     })
 })

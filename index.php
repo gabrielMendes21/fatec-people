@@ -31,9 +31,27 @@
             </aside>
 
             <div class="modal-cadastro">
-                <img src="./assets/x-icon.svg" alt="close icon" class="close">
+                <img src="./assets/x-icon.svg" alt="close icon" class="close-add">
                 <form action="cadastro.php" method="POST">
                     <h2>Adicionar pessoa</h2>
+
+                    <label for="name">Nome</label>
+                    <input type="text" placeholder="Digite seu nome" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Digite o seu email" id="email" name="email" required>
+
+                    <label for="data-nascimento">Data de nascimento</label>
+                    <input type="date" placeholder="Digite a sua data de nascimento" id="data-nascimento" name="dataNasc" required>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="modal-edicao">
+                <img src="./assets/x-icon.svg" alt="close icon" class="close-edit">
+                <form action="cadastro.php" method="POST">
+                    <h2>Editar pessoa</h2>
 
                     <label for="name">Nome</label>
                     <input type="text" placeholder="Digite seu nome" id="name" name="name" required>
@@ -71,7 +89,7 @@
                             <span>' . $user['data_nascimento'] . '</span>
                             <hr>
                             <div class="operations">
-                                <a href="editar.php">EDITAR</a>
+                                <button type="button" class="edit">EDITAR</button>
                                 <form action="excluir.php" method="POST">
                                     <input style="display: none; type="text" value="'. $user["id"] . '" name="id">
                                     <button>EXCLUIR</button>

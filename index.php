@@ -30,7 +30,7 @@
                 </div>
             </aside>
 
-            <div class="modal">
+            <div class="modal-cadastro">
                 <img src="./assets/x-icon.svg" alt="close icon" class="close">
                 <form action="cadastro.php" method="POST">
                     <h2>Adicionar pessoa</h2>
@@ -71,7 +71,7 @@
                             <span>' . $user['data_nascimento'] . '</span>
                             <hr>
                             <div class="operations">
-                                <a href="#">EDITAR</a>
+                                <a href="editar.php">EDITAR</a>
                                 <form action="excluir.php" method="POST">
                                     <input style="display: none; type="text" value="'. $user["id"] . '" name="id">
                                     <button>EXCLUIR</button>

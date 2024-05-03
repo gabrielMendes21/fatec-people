@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const addMusicButton = document.querySelector('.add');
+    const addUserButton = document.querySelector('.add');
     const closeModalButton = document.querySelector('.close');
-    const modal = document.querySelector('.modal');
+    const modal = document.querySelector('.modal-cadastro');
     modal.classList.add("invisible");
 
-    addMusicButton.addEventListener("click", (event) => {
+    addUserButton.addEventListener("click", (event) => {
         modal.classList.remove("invisible");
     })
 

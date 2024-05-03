@@ -39,13 +39,14 @@
                 <input type="hidden" value="<?php echo $id ?>" name="id" id="id">
 
                 <label for="nome">Nome</label>
-                <input value="<?php echo $nome ?>" name="nome" id="nome">
+                <input type="text" value="<?php echo $nome ?>" name="nome" id="nome">
 
                 <label for="email">Email</label>
-                <input value="<?php echo $email ?>" name="email" id="email">
+                <input type="email" value="<?php echo $email ?>" name="email" id="email">
 
                 <label for="data-nasc">Data de nascimento</label>
-                <input value="<?php echo $dataNasc ?>" name="data-nasc" id="data-nasc">
+                <input type="date" value="<?php echo $dataNasc ?>" name="data-nasc" id="data-nasc">
+
                 <button type="submit" class="edit">EDITAR</button>
             </form>
         </main>

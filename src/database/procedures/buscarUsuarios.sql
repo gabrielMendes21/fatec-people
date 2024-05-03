@@ -1,6 +1,6 @@
 DELIMITER //
 CREATE PROCEDURE buscar_usuarios()
 BEGIN
-	SELECT * FROM usuarios;
+	SELECT id, nome, email, DATE_FORMAT(data_nasc, '%d-%m-%Y') AS data_nasc FROM usuarios;
 END //
 DELIMITER ; 

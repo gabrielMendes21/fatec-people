@@ -39,7 +39,7 @@
                     <input type="text" placeholder="Digite seu nome" id="name" name="name" required>
 
                     <label for="email">Email</label>
-                    <input type="text" placeholder="Digite o seu email" id="email" name="email" required>
+                    <input type="email" placeholder="Digite o seu email" id="email" name="email" required>
 
                     <label for="data-nascimento">Data de nascimento</label>
                     <input type="date" placeholder="Digite a sua data de nascimento" id="data-nascimento" name="dataNasc" required>

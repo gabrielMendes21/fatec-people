@@ -14,6 +14,7 @@
 <body>
     <div class="container">
         <header>
+            <p>Desenvolvido por:</p>
             <img src="assets/danilo-perfil.png" alt="">
             <img src="assets/gabriel-perfil.png" alt="">
             <img src="assets/henrique-perfil.png" alt="">
@@ -23,13 +24,9 @@
         </header>
         <div class="vertical-line"></div>
         <div class="content">
-            <aside>
-                <div class="add">                    
-                    <img src="./assets/add-circle.svg" alt="Sinal de mais">
-                    <span>Adicionar pessoa</span>
-                </div>
-            </aside>
-
+            <div class="add">                    
+                <img src="./assets/iconAdd.svg" alt="Sinal de mais">
+            </div>
             <div class="modal-cadastro">
                 <img src="./assets/x-icon.svg" alt="close icon" class="close-add">
                 <form action="cadastro.php" method="POST">
@@ -66,10 +63,10 @@
                         if (mysqli_num_rows($users) > 0) { 
                             foreach ($users as $user) {
                                 echo '<div class="card-dados">
-                                    <img src="./assets/iconUser.png" alt="iconUser" class="iconUser">
-                                    <span>' . $user['nome'] . '</span>
-                                    <span>' . $user['email'] . '</span>
-                                    <span>' . $user['data_nasc'] . '</span>
+                                    <img src="./assets/iconUser.svg" alt="iconUser" class="iconUser">
+                                    <span> Nome: ' . $user['nome'] . '</span>
+                                    <span> Email: ' . $user['email'] . '</span>
+                                    <span> Data de Nascimento: ' . $user['data_nasc'] . '</span>
                                     <hr>
                                     <div class="operations">
                                         <form action="editar.php" method="GET">

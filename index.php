@@ -74,9 +74,6 @@
                                     <div class="operations">
                                         <form action="editar.php" method="GET">
                                             <input type="hidden" value="' . $user['id'] . '" name="id">
-                                            <input type="hidden" value="' . $user['nome'] . '" name="nome">
-                                            <input type="hidden" value="' . $user['email'] . '" name="email">
-                                            <input type="hidden" value="' . $user['data_nasc'] . '" name="data-nasc">
                                             <button type="submit" class="edit">EDITAR</button>
                                         </form>
                                         <form action="excluir.php?id=' . $user['id'] . '" method="POST">

@@ -6,9 +6,22 @@
     $conexao = new Conexao();
 
     $id = $_GET["id"];
-    $nome = $_GET["nome"];
-    $email = $_GET["email"];
-    $dataNasc = $_GET["data-nasc"];
+    $nome = NULL;
+    $email = NULL;
+    $dataNasc = NULL;
+
+    try {
+        $sql = "CALL buscar_usuario('$id')";
+
+        $users = mysqli_query($conexao->conn, $sql);
+        foreach($users as $user) {
+            $nome = $user['nome'];
+            $email = $user['email'];
+            $dataNasc = $user['data_nasc'];
+        }
+    } catch(err) {
+        echo $err->getMessage();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +30,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar</title>
-
-    <!-- JS -->
-    <script src="./src/js/main.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="main.css">
@@ -56,21 +66,26 @@
 
 <?php
 
-    try {
-        if (isset($_POST["id"]) && isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["data-nasc"])) {
-            $id = $_POST["id"];
-            $nome = $_POST["nome"];
-            $email = $_POST["email"];
-            $dataNasc = $_POST["data-nasc"];
-            
-            // Preparar a chamada do procedimento armazenado com parâmetros seguros
-            $sql = "CALL editar_usuario('$id', '$nome', '$email', '$dataNasc')";
-
-            mysqli_query($conexao->conn, $sql);
-            header("Location: index.php");
-        }  
-    } catch(Exception $err) {
-        // Lidar com exceções
-        echo $err->getMessage();
+    if (isset($_POST["id"]) && isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["data-nasc"])) {
+        $id = $_POST["id"];
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $dataNasc = $_POST["data-nasc"];
+        
+        // Limpar resultados da consulta anterior
+        while(mysqli_next_result($conexao->conn)) {
+            if (!$conexao->conn->more_results()) {
+                break;
+            }
+            if (!$conexao->conn->next_result()) {
+                die('Error while clearing results');
+            }
+        }
+        
+        $sql = "CALL editar_usuario('$id', '$nome', '$email', '$dataNasc')";
+        
+        mysqli_query($conexao->conn, $sql);
+        header("Location: index.php");
+        exit(); // Termina o script após o redirecionamento
     }
 ?>
